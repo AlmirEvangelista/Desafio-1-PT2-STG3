@@ -1,0 +1,238 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  font-size: 62.5%;
+  --color-header: #293241;
+  --color-form-header: #F67669;
+  --color-body: #BFD7E4;
+  --fontcolor-titles: #ffffff;  
+  --ff-titles: 'Staatliches', cursive;
+  --ff-content: 'Poppins', sans-serif;
+  --fontcolor-content:#4E4958;
+
+}
+
+body::before{
+  content: '';
+  background-color: var(--color-header);
+  width: 100%;
+  height: 465px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+body{
+  font-family: var(--ff-content);
+  background: #E5E5E5;
+}
+
+.page{
+  width: 750px;
+  margin: 0 auto;
+}
+
+header{
+  margin-top: 100px;
+  text-align: center;
+}
+
+header h1{
+  font-family: var(--ff-titles);
+  font-size: 3.6rem;
+  line-height: 4.5rem;
+  color: #FFFFFF;
+}
+
+header p{
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: var(--fontcolor-titles);
+  padding-bottom: 20px;
+}
+
+.form-header{
+  width: 750px;
+  height: 133px;
+  background-color: var(--color-form-header);
+  margin-top: 32px;
+  border-radius: 20px 20px 0px 0px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-header h1{
+  font-size: 24px;
+  line-height: 34px;
+  color: var(--fontcolor-titles);
+}
+
+form{
+  min-height: 330px;
+  background-color: var(--fontcolor-titles);
+  margin-top: 7px;
+  padding: 23px 65px;
+  border-radius: 0 0 20px 20px;
+  margin-bottom: 100px;
+}
+
+.input-wrapper{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.input-wrapper label{
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--fontcolor-content);
+}
+
+.input-wrapper input{
+  background: #FAFAFC;
+  border: 1px solid #E6E6F0;
+  box-sizing: border-box;
+  border-radius: 8px;
+  height: 56px;
+  padding: 15px;
+  font-family: var(--ff-content);
+}
+
+.col-2, .col-3{
+  display: flex;
+  gap: 22px;
+}
+
+.bloco-1{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+
+fieldset {
+  border: none;
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+fieldset legend{
+  text-align: center;
+  font-family: var(--ff-titles);
+  font-size: 24px;
+  line-height: 34px;
+  color: var(--color-header);
+  border-bottom: 1px solid #E6E6F0;
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.input-wrapper2{
+  display: flex;
+  flex-direction: column;
+}
+
+.input-wrapper2 label{
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--fontcolor-content);
+  margin-bottom: 8px;
+}
+
+.input-wrapper2 input{
+  background: #FAFAFC;
+  border: 1px solid #E6E6F0;
+  box-sizing: border-box;
+  border-radius: 8px;
+  height: 56px;
+  padding: 15px;
+  font-family: var(--ff-content);
+}
+
+.input-wrapper2 select, textarea{
+  background: #FAFAFC;
+  border: 1px solid #E6E6F0;
+  box-sizing: border-box;
+  border-radius: 8px;
+  height: 56px;
+  padding: 15px;
+  font-family: var(--ff-content);
+}
+
+.input-wrapper2 select{
+  width: 300px;
+}
+
+.input-wrapper2 textarea{
+  height: 167px;
+}
+
+.checkbox-wrapper{
+  font-size: 14px;  
+  line-height: 24px;
+  color: #58565e;;
+  display: flex;
+  align-items: center;
+  
+}
+
+.checkbox-wrapper label{
+  display: flex;
+  gap: 8px;
+}
+
+.checkbox-wrapper label::before{
+  content: '';
+  width: 24px;
+  height: 24px;
+  border: 1px solid #E6E6F0;
+  border-radius: 8px;
+}
+
+.checkbox-wrapper input{
+  height: 24px;
+  width: 24px;
+  opacity: 0;
+  position: absolute;
+  border-radius: 8px;
+}
+
+.checkbox-wrapper input:checked + label::before{
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z' fill='%2342D3FF'/%3E%3C/svg%3E%0A");
+}
+
+.checkbox-wrapper input:focus + label::before{
+  outline: 2px solid black;
+}
+
+.col-3 div:nth-child(1){
+  width: 200%;
+}
+
+
+button{
+  font-family: var(--ff-titles);
+  width: 622px;
+  height: 51px;
+  background-color: var(--color-form-header);
+  font-size: 20px;
+  line-height: 26px;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 8px;
+  margin-top: 64px;
+}
+
+button:hover{
+  background-color: #c7675c;
+}
